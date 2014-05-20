@@ -1,0 +1,21 @@
+{
+  "name": "ui-overlay",
+  "version": "0.0.0",
+  "dependencies": {
+    "coffeeify": "",
+    "coffee-script": "",
+    "browserify": "",
+    "browserify-data": "",
+    "gulp": "",
+    "gulp-browserify": "",
+    "gulp-shell": "",
+    "gulp-less": "",
+    "gulp-rename": "",
+    "vulcanize": "",
+    "express": ""
+  },
+  "scripts": {
+    "prepublish": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build",
+    "test": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee watch"
+  }
+}
