@@ -1,4 +1,4 @@
-<polymer-element name="ui-overlay" attributes="hoverclass" assetpath="build/">
+<polymer-element name="ui-overlay" attributes="hoverclass detail" assetpath="build/">
 <template>
   <style type="text/css">:host{display:block}:host #all{display:block;position:relative;width:100%;height:100%}:host #overlay{opacity:0;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1000;transition:opacity .3s;text-align:center}:host #overlay.show{transform:scale(1,1);opacity:1;transition:opacity .3s}</style>
   <section id="all" on-mouseenter="{{showIt}}" on-mouseleave="{{hideIt}}">

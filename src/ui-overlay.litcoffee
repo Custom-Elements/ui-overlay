@@ -10,6 +10,10 @@ actions that appear when you mouse over. Handy for filter effects and icons.
 
 ##Attributes and Change Handlers
 
+###detail
+Additional data to make available. This is a general data binding target so
+that you can inspect `evt.target.detail`.
+
 ###hoverclass
 It's not a hovercraft, it's a hoverclass. This is like a class string, but
 will only be applied to the overlay, and on when you are hovering.
