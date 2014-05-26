@@ -24,29 +24,33 @@
       }
       .covered {
       }
-      .shady .namey {
-        background-color: rgba(0, 0, 0, 0.2);
+      .shady, .namey {
+        background-color: rgba(0, 0, 0, 0.1);
       }
       .shady:before {
         color: white;
         content: 'A';
       }
-      .namey:before {
+      .namey div {
         color: white;
-        content: 'Names!';
+        font-size: 0.2em;
+        line-height: 1em;
         position: absolute;
         left: 0;
         bottom: 0;
+        text-align: center;
       }
     </style>
   </head>
   <body unresolved>
     <div id="holder">
-      <ui-overlay hoverclass="shady">
-        <div class="covered">Cover Me!</div>
+      <ui-overlay>
+      <div overlay class="shady"></div>
+      <div class="covered">Cover Me!</div>
       </ui-overlay>
-      <ui-overlay hoverclass="namey">
-        <div class="covered">Cover Me!</div>
+      <ui-overlay>
+      <div overlay class="namey">B<div>Names!</div></div>
+      <div class="covered">Cover Me!</div>
       </ui-overlay>
     </div>
     <script>
