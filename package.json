@@ -2,20 +2,24 @@
   "name": "ui-overlay",
   "version": "0.0.0",
   "dependencies": {
-    "coffeeify": "",
-    "coffee-script": "",
     "browserify": "",
     "browserify-data": "",
+    "coffee-script": "",
+    "coffeeify": "",
+    "express": "",
     "gulp": "",
     "gulp-browserify": "",
-    "gulp-shell": "",
+    "gulp-concat": "",
     "gulp-less": "",
     "gulp-rename": "",
-    "vulcanize": "",
-    "express": ""
+    "gulp-replace": "",
+    "gulp-shell": "",
+    "ui-styles": "git+https://github.com/wballard/ui-styles.git",
+    "vulcanize": ""
   },
+  "license": "MIT",
   "scripts": {
-    "prepublish": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build",
+    "postinstall": "bower install && gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build",
     "test": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee watch"
   }
 }

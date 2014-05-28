@@ -17,9 +17,7 @@ line height to completely span the overlay. So, a single
 [FontAwesome](http://fortawesome.github.io/Font-Awesome/) icon can center
 and cover.
 
-    ResizeSensor = require './ResizeSensor'
 
-    Polymer 'ui-overlay',
 
 ##Events
 No custom events are fired
@@ -34,29 +32,21 @@ that you can inspect `evt.target.detail`.
 
 ##Event Handlers
 
-      showIt: ->
-        @$.overlay.classList.add 'show'
 
-      hideIt: ->
-        @$.overlay.classList.remove 'show'
 
-      resized: ->
-        size = Math.min(@clientWidth, @clientHeight) / Math.max(1, window.getComputedStyle(@$.overlay, 'before')['content']?.length)
-        @$.overlay.style['font-size'] = "#{size}px"
-        @$.overlay.style['line-height'] = "#{size}px"
+
+
+
+
+
 
 ##Polymer Lifecycle
 This overlay automatically resizes to cover the wrapped element.
 
-      created: ->
 
-      ready: ->
 
-      attached: ->
-        @sensor = new ResizeSensor @$.overlay, =>
-          @resized()
-        @resized()
 
-      domReady: ->
 
-      detached: ->
+
+
+
