@@ -1,8 +1,8 @@
-<polymer-element name="ui-overlay" attributes="detail">
+<polymer-element name="ui-overlay" attributes="detail hover">
 <template >
   <link rel="stylesheet" type="text/css" href="./ui-overlay.css">
   <section id="all" on-mouseenter="{{showIt}}" on-mouseleave="{{hideIt}}">
-    <section id="overlay">
+    <section id="overlay" class="show">
       <content select="[overlay]" class="{{hoverclass}}"></content>
     </section>
     <content></content>
