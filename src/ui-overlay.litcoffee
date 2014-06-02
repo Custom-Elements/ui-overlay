@@ -47,13 +47,13 @@ Set this flag attribute if you want the overlay to show and hide on hover.
 ##Event Handlers
 
       showIt: ->
+        @resized()
         @$.overlay.classList.add('show') if @hover?
 
       hideIt: ->
         @$.overlay.classList.remove('show') if @hover?
 
       resized: ->
-        @$.overlay.classList.remove('show') if @hover?
         size = Math.min(@clientWidth, @clientHeight) / Math.max(1, window.getComputedStyle(@$.overlay, 'before')['content']?.length)
         @$.overlay.style['font-size'] = "#{size}px"
         @$.overlay.style['line-height'] = "#{size}px"
@@ -66,6 +66,7 @@ This overlay automatically resizes to cover the wrapped element.
       ready: ->
 
       attached: ->
+        @$.overlay.classList.remove('show') if @hover?
         @sensor = new ResizeSensor @$.overlay, =>
           @resized()
         @resized()
